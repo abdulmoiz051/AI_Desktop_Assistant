@@ -3,7 +3,7 @@ import speech_recognition as speech
 import pyttsx3, webbrowser, os, time
 import gemini_conf
 
-client = genai.Client(api_key="AIzaSyB1ENqmJ1uEJpsr56r94cDUJeNExLENvrg")
+client = os.getenv("gemini_api")
 
 import speech_recognition as sr
 

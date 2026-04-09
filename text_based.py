@@ -1,9 +1,12 @@
 from google import genai
+from dotenv import load_dotenv
 import speech_recognition as speech
 import pyttsx3, webbrowser, os, time
-import gemini_conf
+import gemini_conf, os
 
-client = genai.Client(api_key="AIzaSyB1ENqmJ1uEJpsr56r94cDUJeNExLENvrg")
+load_dotenv()
+
+client = os.getenv("gemini_api")
 
 if __name__ == "__main__":
         while(True):
